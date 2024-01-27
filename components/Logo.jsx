@@ -13,7 +13,6 @@ function Logo() {
               width={90}
               height={0}
               priority
-              alt="Logo"
           />
 
         </Link>
