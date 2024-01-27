@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
-     xmlns:svgjs="http://svgjs.dev/svgjs" width="2000" height="1500" viewBox="0 0 2000 1500">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+     width="2000" height="1500" viewBox="0 0 2000 1500">
     <rect width="2000" height="1500" fill="#fe705a"></rect>
     <g transform="matrix(0.75,0,0,0.75,249.090909090909,550.9500769281053)">
         <svg viewBox="0 0 396 105" data-background-color="#fe705a" preserveAspectRatio="xMidYMid meet" height="530"
-             width="2000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+             width="2000" xmlns="http://www.w3.org/2000/svg">
             <g id="tight-bounds" transform="matrix(1,0,0,1,0.2400000000000091,0.07922496238728627)">
                 <svg viewBox="0 0 395.52 104.84155007522541" height="104.84155007522541" width="395.52">
                     <g>
@@ -31,7 +31,7 @@
                             </g>
                             <g transform="matrix(1,0,0,1,421.4887075965644,0)">
                                 <svg viewBox="0 0 152.0220348466258 152.0220348466258" height="152.0220348466258"
-                                     width="152.0220348466258" >
+                                     width="152.0220348466258">
                                     <g data-palette-color="#ffffff">
                                         <rect width="41.55268952474438" height="152.0220348466258" fill="#ffffff"
                                               stroke="transparent" data-fill-palette-color="accent" x="0"
