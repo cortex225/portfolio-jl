@@ -8,6 +8,7 @@ const useScrollProgress = () => {
 
   // Utilisation du hook useEffect pour gérer les effets de bord
   useEffect(() => {
+
     // Définition de la fonction qui met à jour la progression du défilement
     const UpdateScrollCompletion = () => {
       // Récupération de la position actuelle de défilement
@@ -32,5 +33,4 @@ const useScrollProgress = () => {
   return completion;
 };
 
-// Exportation du hook pour pouvoir l'utiliser dans d'autres fichiers
 export default useScrollProgress;
