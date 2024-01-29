@@ -9,7 +9,7 @@ const DevImg = ({containerStyles, imgSrc}) => {
                 alt="dev-img"
                 fill={true}
                 layout={"fill"}
-                objectFit={"cover"}
+                objectFit={"fit"}
             />
         </div>
     );

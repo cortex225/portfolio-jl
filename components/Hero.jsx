@@ -76,7 +76,7 @@ const Hero = () => {
                             containerStyles={
                                 "bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"
                             }
-                            imgSrc={"/hero/test.png"}
+                            imgSrc={"/hero/jl-avatar.png"}
                         />
                     </div>
                 </div>
