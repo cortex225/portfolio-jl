@@ -26,7 +26,7 @@ const projectData = [
     {
         image: "/work/2.png",
         category: "Web Development",
-        name: "Project 1",
+        name: "Project 2",
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur.",
         link: "/",
         github: "/",
@@ -34,7 +34,7 @@ const projectData = [
     {
         image: "/work/3.png",
         category: "Web Development",
-        name: "Project 1",
+        name: "Project 3",
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur.",
         link: "/",
         github: "/",
@@ -42,7 +42,7 @@ const projectData = [
     {
         image: "/work/4.png",
         category: "Web Development",
-        name: "Project 1",
+        name: "Project 4",
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur.",
         link: "/",
         github: "/",
@@ -50,7 +50,7 @@ const projectData = [
     {
         image: "/work/4.png",
         category: "Web Development",
-        name: "Project 1",
+        name: "Project 5",
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur.",
         link: "/",
         github: "/",
