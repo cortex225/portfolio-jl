@@ -38,7 +38,7 @@ const skillsData = [
         title: "skills",
         data: [
             {
-                name: "React",
+                name: ".NET",
                 iconPath: "/about/vscode.svg",
 
             },
@@ -67,37 +67,95 @@ const skillsData = [
                 iconPath: "/about/vscode.svg",
 
             },
+
+        ]
+    },
+    {
+        title: "frontend",
+        data: [
             {
-                name: "Framer Motion",
+                name: "JavaScript",
                 iconPath: "/about/vscode.svg",
 
             },
             {
-                name: "Framer Motion",
+                name: "React",
                 iconPath: "/about/vscode.svg",
 
             },
             {
-                name: "Framer Motion",
+                name: "Vue.js",
+                iconPath: "/about/vscode.svg",
+
+            },
+
+        ]
+    },
+    {
+        title: "backend",
+        data: [
+            {
+                name: "C#",
                 iconPath: "/about/vscode.svg",
 
             },
             {
-                name: "Framer Motion",
+                name: ".NET Framework",
                 iconPath: "/about/vscode.svg",
 
             },
             {
-                name: "Framer Motion",
+                name: "SQL",
                 iconPath: "/about/vscode.svg",
 
             },
             {
-                name: "Framer Motion",
+                name: "NoSQL",
                 iconPath: "/about/vscode.svg",
 
             },
 
+        ]
+    },
+    {
+        title: "devOps",
+        data: [
+            {
+                name: "Docker",
+                iconPath: "/about/vscode.svg",
+
+            },
+            {
+                name: "Azure Cloud",
+                iconPath: "/about/vscode.svg",
+
+            },
+            {
+                name: "AWS",
+                iconPath: "/about/vscode.svg",
+
+            },
+            {
+                name: "NoSQL",
+                iconPath: "/about/vscode.svg",
+
+            },
+
+        ]
+    },
+    {
+        title: "Additional Key Technologies",
+        data: [
+            {
+                name: "AGILE/SCRUM",
+                iconPath: "/about/vscode.svg",
+
+            },
+            {
+                name: "WordPress",
+                iconPath: "/about/vscode.svg",
+
+            },
 
         ]
     },
@@ -116,7 +174,7 @@ const skillsData = [
             },
             {
                 imgPath: "/about/notion.svg",
-                name: "Notion"
+                name: "IntelliJ"
 
             },
             {
@@ -135,49 +193,41 @@ const qualificationsData = [
         data: [
             {
                 university: "Cegep de Granby",
-                qualification: "Bachelor's Degree",
-                years: "2015 - 2018",
+                qualification: "DEC in Computer Science and Management",
+                years: "Québec, Canada - 2024",
             },
             {
-                university: "Cegep de Granby",
-                qualification: "Bachelor's Degree",
-                years: "2015 - 2018",
+                university: "College le Figuier",
+                qualification: "Hight School Degree",
+                years: "Abidjan, Côte d'Ivoire - 2017",
             },
-            {
-                university: "Cegep de Granby",
-                qualification: "Bachelor's Degree",
-                years: "2015 - 2018",
-            },
+
         ]
     },
     {
         title: "experience",
         data: [
             {
-                company: "Compagnie 1",
-                role: "Bachelor's Degree",
-                years: "2015 - 2018",
+                company: "Royal Broker Solutions",
+                role: "Web Developer",
+                years: "August 2022 - Now",
             },
             {
-                company: "Compagnie 2",
-                role: "Bachelor's Degree",
-                years: "2015 - 2018",
+                company: "Royal Broker Solutions",
+                role: "Stage Web Developer",
+                years: "April 2022 - August 2022",
             },
             {
-                company: "Compagnie 3",
-                role: "Bachelor's Degree",
-                years: "2015 - 2018",
+                company: "Rogers Communication",
+                role: "Seller Specialist",
+                years: "November 2021 - Avril 2022",
             },
             {
-                company: "Compagnie 4",
-                role: "Bachelor's Degree",
-                years: "2015 - 2018",
+                company: "Best Buy",
+                role: "Customer Service",
+                years: "October 2020 - November 2021",
             },
-            {
-                company: "Compagnie 5",
-                role: "Bachelor's Degree",
-                years: "2015 - 2018",
-            },
+
 
         ]
     },
@@ -190,7 +240,6 @@ const About = () => {
         return arr.find((item) => item.title === title);
     };
 
-    console.log(getData(qualificationsData, "education"));
 
     return (
         <section className={"xl:h-[860px pb-12 xl:py-24"}>
@@ -351,7 +400,19 @@ const About = () => {
                                             <div className={"border-b border-border mb-4"}></div>
                                             {/*  skill list  */}
                                             <div className={"grid md:grid-cols-2 gap-y-8 "}>
-                                                {getData(skillsData, "skills").data.map((item, index) => {
+                                                {getData(skillsData, "frontend").data.map((item, index) => {
+                                                    return (
+                                                        <div className={"flex items-center gap-x-4 mb-4"} key={index}>
+                                                            <div className={"text-primary"}>
+                                                                <Image src={item.iconPath} width={24} height={24}/>
+                                                            </div>
+                                                            <div>{item.name}</div>
+                                                        </div>
+                                                    );
+                                                })}
+                                            </div>
+                                            <div className={"grid md:grid-cols-2 gap-y-8 "}>
+                                                {getData(skillsData, "backend").data.map((item, index) => {
                                                     return (
                                                         <div className={"flex items-center gap-x-4 mb-4"} key={index}>
                                                             <div className={"text-primary"}>
