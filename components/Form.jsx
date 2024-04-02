@@ -24,9 +24,9 @@ const Form = () => {
         <MessageSquare className="absolute top-4 right-6" size={20} />
       </div>
       <Button className="flex items-center gap-x-1 max-w-[166px]" >
-        Let's Talk
+        Let&apos;s Talk
         <ArrowRightIcon className="ml-2" size={20} />
-        </Button>
+      </Button>
     </form>
   );
 };

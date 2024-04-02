@@ -21,7 +21,7 @@ const Hero = () => {
                         </div>
                         <h1 className="h1 mb-4">Hello, my name is Jean-Luc Gouaho</h1>
                         <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-                            I'm a web developer based in Ivory Coast. I have a passion for web
+                            I&apos;m a web developer based in Ivory Coast. I have a passion for web
                             development and love to create for web and mobile devices.
                         </p>
                         {/* button CTA */}

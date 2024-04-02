@@ -404,7 +404,7 @@ const About = () => {
                                                     return (
                                                         <div className={"flex items-center gap-x-4 mb-4"} key={index}>
                                                             <div className={"text-primary"}>
-                                                                <Image src={item.iconPath} width={24} height={24}/>
+                                                                <Image src={item.iconPath} width={24} height={24} alt="" />
                                                             </div>
                                                             <div>{item.name}</div>
                                                         </div>
@@ -416,7 +416,7 @@ const About = () => {
                                                     return (
                                                         <div className={"flex items-center gap-x-4 mb-4"} key={index}>
                                                             <div className={"text-primary"}>
-                                                                <Image src={item.iconPath} width={24} height={24}/>
+                                                                <Image src={item.iconPath} width={24} height={24} alt="" />
                                                             </div>
                                                             <div>{item.name}</div>
                                                         </div>
@@ -434,7 +434,7 @@ const About = () => {
                                                     return (
                                                         <div className={"flex items-center gap-x-4 mb-4"} key={index}>
                                                             <div className={"text-primary"}>
-                                                                <Image src={item.imgPath} width={24} height={24}/>
+                                                                <Image src={item.imgPath} width={24} height={24} alt="" />
                                                             </div>
                                                             <div>{item.name}</div>
                                                         </div>
