@@ -295,7 +295,7 @@ const About = () => {
                                         {/*  language  */}
                                         <div>
                                             <div className={"text-primary"}>Language Skill</div>
-                                            <div className={"border-b border-border"}></div>
+                                            <div className={"border-b border-border"} />
                                             <div className={"grid xl:grid-cols-2 gap-4"}>
                                                 <div className={"flex items-center gap-x-4 mx-auto xl:mx-0"}>
                                                     <div className={""}>French -</div>
@@ -333,7 +333,7 @@ const About = () => {
                                                                 <div
                                                                     className={"h-[84px w-[1px] bg-border relative ml-2.5"}>
                                                                     <div
-                                                                        className={"w-[11px] h-[11px] rounded-full bg-primary absolute  -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"}></div>
+                                                                        className={"w-[11px] h-[11px] rounded-full bg-primary absolute  -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"} />
                                                                 </div>
 
 
@@ -369,7 +369,7 @@ const About = () => {
                                                                 <div
                                                                     className={"h-[84px w-[1px] bg-border relative ml-2.5"}>
                                                                     <div
-                                                                        className={"w-[11px] h-[11px] rounded-full bg-primary absolute  -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"}></div>
+                                                                        className={"w-[11px] h-[11px] rounded-full bg-primary absolute  -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"} />
                                                                 </div>
 
 
@@ -397,7 +397,7 @@ const About = () => {
                                         {/*skills*/}
                                         <div className={"mb-16"}>
                                             <h4 className={"text-xl font-semibold mb-2"}>Skills</h4>
-                                            <div className={"border-b border-border mb-4"}></div>
+                                            <div className={"border-b border-border mb-4"} />
                                             {/*  skill list  */}
                                             <div className={"grid md:grid-cols-2 gap-y-8 "}>
                                                 {getData(skillsData, "frontend").data.map((item, index) => {
@@ -427,7 +427,7 @@ const About = () => {
                                         {/*tools*/}
                                         <div className={"mb-16"}>
                                             <h4 className={"text-xl font-semibold mb-2"}>Tools</h4>
-                                            <div className={"border-b border-border mb-4"}></div>
+                                            <div className={"border-b border-border mb-4"} />
                                             {/*  skill list  */}
                                             <div>
                                                 {getData(skillsData, "tools").data.map((item, index) => {

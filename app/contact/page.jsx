@@ -11,7 +11,7 @@ function Contact() {
           {/* text */}
           <div className="flex flex-col justify-center">
             <div className="flex items-center gap-x-4 text-primary text-lg mb-4">
-              <span className="w-[30px] h-[2px] bg-primary"></span>
+              <span className="w-[30px] h-[2px] bg-primary" />
               Say Hello &lsquo;👋&rsquo;
             </div>
             <h1 className="h1 max-w-md mb-8">Let&lsquo;s Work Together</h1>
@@ -23,7 +23,7 @@ function Contact() {
           {/* illusration */}
           <div
             className="hidden xl:flex w-full bg-contact_illustration_light dark:bg-contact_illustration_dark
-            bg-contain bg-top bg-no-repeat"></div>
+            bg-contain bg-top bg-no-repeat" />
         </div>
         {/* info text & from */}
         <div className="grid xl:grid-cols-2 mb-24 xl:mb-32">

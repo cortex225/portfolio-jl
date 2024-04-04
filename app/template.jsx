@@ -27,7 +27,7 @@ const Template = ({children}) => {
             {/* completion bar */}
             <span
                 style={{transform: `translateY(${completion - 100}%)`}}
-                className="fixed z-50 top-0 right-0 bottom-0 w-1 bg-primary transition-all duration-700"></span>
+                className="fixed z-50 top-0 right-0 bottom-0 w-1 bg-primary transition-all duration-700" />
         </>
     );
 };
