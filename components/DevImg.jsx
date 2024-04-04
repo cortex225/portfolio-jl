@@ -7,7 +7,7 @@ const DevImg = ({containerStyles, imgSrc}) => {
                 src={imgSrc}
                 priority
                 alt="dev-img"
-                fill={true}
+                fill
                 layout={"fill"}
                 objectFit={"fit"}
             />
