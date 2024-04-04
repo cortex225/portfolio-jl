@@ -1,56 +1,55 @@
-import Form from "@/components/Form";
-import { MailIcon, HomeIcon, PhoneCall } from "lucide-react";
-import Socials from "@/components/Socials";
+import Form from '@/components/Form'
+import { MailIcon, HomeIcon, PhoneCall } from 'lucide-react'
+import Socials from '@/components/Socials'
 
-function Contact() {
+function Contact () {
   return (
     <section>
-      <div className="container mx-auto">
+      <div className='container mx-auto'>
         {/*  text & illucatration */}
-        <div className="grid xl:grid-cols-2 pt-12 xl:h-[480px] mb-6 xl:mb-24">
+        <div className='grid xl:grid-cols-2 pt-12 xl:h-[480px] mb-6 xl:mb-24'>
           {/* text */}
-          <div className="flex flex-col justify-center">
-            <div className="flex items-center gap-x-4 text-primary text-lg mb-4">
-              <span className="w-[30px] h-[2px] bg-primary" />
+          <div className='flex flex-col justify-center'>
+            <div className='flex items-center gap-x-4 text-primary text-lg mb-4'>
+              <span className='w-[30px] h-[2px] bg-primary' />
               Say Hello &lsquo;👋&rsquo;
             </div>
-            <h1 className="h1 max-w-md mb-8">Let&lsquo;s Work Together</h1>
-            <p className="subtitle max-w-[400px]">
+            <h1 className='h1 max-w-md mb-8'>Let&lsquo;s Work Together</h1>
+            <p className='subtitle max-w-[400px]'>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
               consequatur. Integer sit amet, consectetur adipisicing
             </p>
           </div>
           {/* illusration */}
           <div
-            className="hidden xl:flex w-full bg-contact_illustration_light dark:bg-contact_illustration_dark
-            bg-contain bg-top bg-no-repeat" />
+            className='hidden xl:flex w-full bg-contact_illustration_light dark:bg-contact_illustration_dark
+            bg-contain bg-top bg-no-repeat'
+          />
         </div>
         {/* info text & from */}
-        <div className="grid xl:grid-cols-2 mb-24 xl:mb-32">
+        <div className='grid xl:grid-cols-2 mb-24 xl:mb-32'>
           {/* info text */}
-          <div className=" flex flex-col gap-y-4 xl:gap-y-14 mb-12 xl:mb-24 text-base xl:text-lg">
+          <div className=' flex flex-col gap-y-4 xl:gap-y-14 mb-12 xl:mb-24 text-base xl:text-lg'>
             {/* social */}
-            <div className="flex items-center gap-x-8">
+            <div className='flex items-center gap-x-8'>
               <Socials
-                containerStyles={"flex gap-x-6 mx-auto xl:mx-0"}
-                iconsStyles={
-                  "text-foreground text-[36px] hover:text-primary transition-all"
-                }
+                containerStyles='flex gap-x-6 mx-auto xl:mx-0'
+                iconsStyles='text-foreground text-[36px] hover:text-primary transition-all'
               />
             </div>
             {/* mail */}
-            <div className="flex items-center gap-x-8">
-              <MailIcon size={18} className="text-primary" />
+            <div className='flex items-center gap-x-8'>
+              <MailIcon size={18} className='text-primary' />
               <div>jlgouaho@gmail</div>
             </div>
             {/* address */}
-            <div className="flex items-center gap-x-8">
-              <HomeIcon size={18} className="text-primary" />
+            <div className='flex items-center gap-x-8'>
+              <HomeIcon size={18} className='text-primary' />
               <div>Canada</div>
             </div>
             {/* phone */}
-            <div className="flex items-center gap-x-8">
-              <PhoneCall size={18} className="text-primary" />
+            <div className='flex items-center gap-x-8'>
+              <PhoneCall size={18} className='text-primary' />
               <div>+1 450-521-1098</div>
             </div>
           </div>
@@ -58,7 +57,7 @@ function Contact() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default Contact;
+export default Contact
