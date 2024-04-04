@@ -82,7 +82,7 @@ const FormControl = React.forwardRef(({...props}, ref) => {
                     ? `${formDescriptionId}`
                     : `${formDescriptionId} ${formMessageId}`
             }
-            aria-invalid={!!error}
+            aria-invalid={Boolean(error)}
             {...props} />)
     );
 })
