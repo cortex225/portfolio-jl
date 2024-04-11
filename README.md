@@ -18,6 +18,7 @@
 </p>
 
 <br><!-- TABLE OF CONTENTS -->
+
 <details>
   <summary>Table of Contents</summary><br>
 
@@ -36,29 +37,29 @@
 </details>
 <hr>
 
-##  Overview
+## Overview
 
 The portfolio-jl project is a dynamic portfolio website built with Next.js and React components. It offers a visually appealing layout with sections for showcasing projects, personal information, services, and contact details. The project leverages Tailwind CSS for consistent styling and responsiveness, enhancing user experience. Key features include interactive project sliders, theme toggling, dynamic navigation, and form submissions. With a focus on modularity and user engagement, portfolio-jl presents a comprehensive overview of skills and projects while promoting seamless navigation and interaction for visitors.
 
 ---
 
-##  Features
+## Features
 
-|    |   Feature         | Description |
-|----|-------------------|---------------------------------------------------------------|
-| ⚙️  | **Architecture**  | The project has an architecture built on React, Next.js, and Tailwind CSS, integrating various components like Hero, About, Services, and Navigation. Speed insights, analytics, Swiper, and other libraries are utilized for performance and functionality. Dockerfile for deployment and pnpm for package management. |
-| 🔩 | **Code Quality**  | The codebase maintains quality with structured component files, form handling, and UI components like button, carousel, and modal sheets. Consistent styling with Tailwind CSS and Autoprefixer. Linting with ESLint. Scalability is ensured with Node 18 in Dockerfile. |
-| 📄 | **Documentation** | Extensive documentation includes jsconfig.json for import resolution, postcss.config.js for styling plugins, and Dockerfile for Next.js deployment. Package.json manages dependencies, and README provides project overview. Component files have detailed descriptions for functionality and usage. |
-| 🔌 | **Integrations**  | Integrates various libraries such as clsx, embla-carousel-react, react-icons, framer-motion, and zod for enhanced functionality and styling. Next-themes for theme management, Radix UI for tabs and labels, and React Hook Form for form handling. Speed insights and analytics for performance monitoring. |
-| 🧩 | **Modularity**    | Codebase exhibits modularity with components like Work, Header, Socials, providing clear functionality and visual elements. UI components like Button, Card, Form, and Carousel ensure reusable and maintainable code. Path aliases and structured imports enhance modular development. |
-| 🧪 | **Testing**       | Testing practices not explicitly mentioned in the provided details. |
-| ⚡️  | **Performance**   | Performance optimization achieved through efficient image loading, animated count updates using React CountUp, and Autoprefixer for cross-browser compatibility. Implementation of Swiper carousel and smooth animations with Framer Motion enhance user experience. Docker image setup ensures portability and predictability. |
-| 🛡️ | **Security**      | Measures for data protection and access control not explicitly discussed in the provided details. It's recommended to ensure secure handling of user inputs and sensitive data within the application. |
-| 📦 | **Dependencies**  | Key external libraries and dependencies include clsx, embla-carousel-react, react-icons, framer-motion, zod, Next-themes, and Radix UI components like tab and dialog. Tailwind CSS plugins and Autoprefixer for styling. Linting with ESLint. Deployment with Dockerfile and Node 18. |
+|     | Feature           | Description                                                                                                                                                                                                                                                                                                                     |
+| --- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ⚙️  | **Architecture**  | The project has an architecture built on React, Next.js, and Tailwind CSS, integrating various components like Hero, About, Services, and Navigation. Speed insights, analytics, Swiper, and other libraries are utilized for performance and functionality. Dockerfile for deployment and pnpm for package management.         |
+| 🔩  | **Code Quality**  | The codebase maintains quality with structured component files, form handling, and UI components like button, carousel, and modal sheets. Consistent styling with Tailwind CSS and Autoprefixer. Linting with ESLint. Scalability is ensured with Node 18 in Dockerfile.                                                        |
+| 📄  | **Documentation** | Extensive documentation includes jsconfig.json for import resolution, postcss.config.js for styling plugins, and Dockerfile for Next.js deployment. Package.json manages dependencies, and README provides project overview. Component files have detailed descriptions for functionality and usage.                            |
+| 🔌  | **Integrations**  | Integrates various libraries such as clsx, embla-carousel-react, react-icons, framer-motion, and zod for enhanced functionality and styling. Next-themes for theme management, Radix UI for tabs and labels, and React Hook Form for form handling. Speed insights and analytics for performance monitoring.                    |
+| 🧩  | **Modularity**    | Codebase exhibits modularity with components like Work, Header, Socials, providing clear functionality and visual elements. UI components like Button, Card, Form, and Carousel ensure reusable and maintainable code. Path aliases and structured imports enhance modular development.                                         |
+| 🧪  | **Testing**       | Testing practices not explicitly mentioned in the provided details.                                                                                                                                                                                                                                                             |
+| ⚡️ | **Performance**   | Performance optimization achieved through efficient image loading, animated count updates using React CountUp, and Autoprefixer for cross-browser compatibility. Implementation of Swiper carousel and smooth animations with Framer Motion enhance user experience. Docker image setup ensures portability and predictability. |
+| 🛡️  | **Security**      | Measures for data protection and access control not explicitly discussed in the provided details. It's recommended to ensure secure handling of user inputs and sensitive data within the application.                                                                                                                          |
+| 📦  | **Dependencies**  | Key external libraries and dependencies include clsx, embla-carousel-react, react-icons, framer-motion, zod, Next-themes, and Radix UI components like tab and dialog. Tailwind CSS plugins and Autoprefixer for styling. Linting with ESLint. Deployment with Dockerfile and Node 18.                                          |
 
 ---
 
-##  Repository Structure
+## Repository Structure
 
 ```sh
 └── portfolio-jl/
@@ -119,12 +120,12 @@ The portfolio-jl project is a dynamic portfolio website built with Next.js and R
 
 ---
 
-##  Modules
+## Modules
 
 <details closed><summary>.</summary>
 
 | File                                                                                           | Summary                                                                                                                                                                                                                                                                                                                                                                                                |
-| ---                                                                                            | ---                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [components.json](https://github.com/cortex225/portfolio-jl/blob/master/components.json)       | Defines component style configurations, Tailwind setup, and path aliases for the UI components in the project. Aligns global styles and Tailwind CSS settings with the component framework using the specified schema.                                                                                                                                                                                 |
 | [pnpm-lock.yaml](https://github.com/cortex225/portfolio-jl/blob/master/pnpm-lock.yaml)         | This code file in the portfolio-jl repository serves as a key component in configuring the layout and structure of the web application. It leverages React components to define the overall appearance and organization of the portfolio website. Through the use of layout.jsx and template.jsx, it ensures a cohesive and visually appealing presentation of content, enhancing the user experience. |
 | [jsconfig.json](https://github.com/cortex225/portfolio-jl/blob/master/jsconfig.json)           | Defines path aliases for modular import resolution, enabling simplified component imports across the React-based portfolio website.                                                                                                                                                                                                                                                                    |
@@ -139,7 +140,7 @@ The portfolio-jl project is a dynamic portfolio website built with Next.js and R
 <details closed><summary>components</summary>
 
 | File                                                                                                    | Summary                                                                                                                                                                                                                                                                                                                                  |
-| ---                                                                                                     | ---                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Work.jsx](https://github.com/cortex225/portfolio-jl/blob/master/components/Work.jsx)                   | Showcases latest projects in a slider format with project cards. Offers links to detailed project information. Engages users with concise project summaries and a call-to-action button to view all projects.                                                                                                                            |
 | [Header.jsx](https://github.com/cortex225/portfolio-jl/blob/master/components/Header.jsx)               | Implements dynamic header behavior for navigation in the React-based portfolio site. Utilizes scroll position and page pathname to adjust header appearance. Includes logo, navigation links, theme toggler, and mobile navigation components for a cohesive user experience.                                                            |
 | [ThemeProvider.jsx](https://github.com/cortex225/portfolio-jl/blob/master/components/ThemeProvider.jsx) | Enables theme management for app components using next-themes. Integrates theming functionality across the portfolio site seamlessly.                                                                                                                                                                                                    |
@@ -154,7 +155,7 @@ The portfolio-jl project is a dynamic portfolio website built with Next.js and R
 | [Cta.jsx](https://github.com/cortex225/portfolio-jl/blob/master/components/Cta.jsx)                     | This component encourages users to engage by offering assistance and prompting action through a call-to-action button linked to the contact page. It plays a pivotal role in soliciting user interaction within the portfolio websites architecture.                                                                                     |
 | [DevImg.jsx](https://github.com/cortex225/portfolio-jl/blob/master/components/DevImg.jsx)               | Implements a reusable component for developer images in the portfolio site. Integrates Next.js image optimization for efficient loading and responsive design.                                                                                                                                                                           |
 | [Nav.jsx](https://github.com/cortex225/portfolio-jl/blob/master/components/Nav.jsx)                     | Defines navigation links dynamically based on page path in Next.js, enhancing user experience with smooth page transitions. Integrates Framer Motion for stylish animations, improving visual appeal and interaction within the portfolio website structure.                                                                             |
-| [ProjectCard.jsx](https://github.com/cortex225/portfolio-jl/blob/master/components/ProjectCard.jsx)     | Creates** visually appealing project cards with dynamic image loading and interactive buttons for GitHub and project links. Organizes project details elegantly within a styled card component for seamless integration into the portfolio websites UI.                                                                                  |
+| [ProjectCard.jsx](https://github.com/cortex225/portfolio-jl/blob/master/components/ProjectCard.jsx)     | Creates\*\* visually appealing project cards with dynamic image loading and interactive buttons for GitHub and project links. Organizes project details elegantly within a styled card component for seamless integration into the portfolio websites UI.                                                                                |
 | [Logo.jsx](https://github.com/cortex225/portfolio-jl/blob/master/components/Logo.jsx)                   | Implements a logo component linking to the homepage using Next.js routing. It showcases the logo image with a rounded design for the portfolio website, enhancing branding and navigation experience for users within the parent repositorys architecture.                                                                               |
 | [Badge.jsx](https://github.com/cortex225/portfolio-jl/blob/master/components/Badge.jsx)                 | Implements a Badge component for displaying dynamic count and text. Used to showcase achievements or statistics visually. Key features include animated count updates with React CountUp and customizable styles for various use cases in the portfolio website.                                                                         |
 
@@ -163,7 +164,7 @@ The portfolio-jl project is a dynamic portfolio website built with Next.js and R
 <details closed><summary>components.ui</summary>
 
 | File                                                                                             | Summary                                                                                                                                                                                                                                                                                                               |
-| ---                                                                                              | ---                                                                                                                                                                                                                                                                                                                   |
+| ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [tabs.jsx](https://github.com/cortex225/portfolio-jl/blob/master/components/ui/tabs.jsx)         | Implements interactive tabs for user navigation within the portfolio website. Connects with Radix UIs tab components for seamless functionality.                                                                                                                                                                      |
 | [label.jsx](https://github.com/cortex225/portfolio-jl/blob/master/components/ui/label.jsx)       | Enhances label styling using class variance for React components. Integrates Radix UIs label component with custom styles for font size, weight, and cursor effects. Facilitates seamless application of label styling across the project.                                                                            |
 | [button.jsx](https://github.com/cortex225/portfolio-jl/blob/master/components/ui/button.jsx)     | Defines button variants and styling for the UI components. Integrates diverse design options like default, destructive, outline, secondary, ghost, and link styles, with various sizes. Maintains a clean, reusable code structure for enhancing button functionalities within the portfolio website.                 |
@@ -180,7 +181,7 @@ The portfolio-jl project is a dynamic portfolio website built with Next.js and R
 <details closed><summary>app</summary>
 
 | File                                                                                   | Summary                                                                                                                                                                                                                                         |
-| ---                                                                                    | ---                                                                                                                                                                                                                                             |
+| -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [globals.css](https://github.com/cortex225/portfolio-jl/blob/master/app/globals.css)   | Defines color variables and styles for a Tailwind-based design system. Sets base colors and dark mode variants. Applies typography and layout styles for headings, subtitles, section titles, and badges. Also customizes Swiper bullet styles. |
 | [layout.jsx](https://github.com/cortex225/portfolio-jl/blob/master/app/layout.jsx)     | Implements the layout structure for the website, integrating the header, footer, and theming. Utilizes speed insights and analytics components for performance monitoring.                                                                      |
 | [template.jsx](https://github.com/cortex225/portfolio-jl/blob/master/app/template.jsx) | Implements a scroll progress bar using animation effects in the portfolio website. Displays content using motion transitions and dynamic completion tracking.                                                                                   |
@@ -191,7 +192,7 @@ The portfolio-jl project is a dynamic portfolio website built with Next.js and R
 <details closed><summary>app.projects</summary>
 
 | File                                                                                    | Summary                                                                                                                                                                                                                                                                                                                           |
-| ---                                                                                     | ---                                                                                                                                                                                                                                                                                                                               |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [page.jsx](https://github.com/cortex225/portfolio-jl/blob/master/app/projects/page.jsx) | Implements project filtering and display based on categories. Utilizes Tabs component for navigation. Offers a concise overview of featured projects with images, categories, names, descriptions, links, and GitHub references. Enhances user experience through dynamic content presentation within the portfolio architecture. |
 
 </details>
@@ -199,7 +200,7 @@ The portfolio-jl project is a dynamic portfolio website built with Next.js and R
 <details closed><summary>app.contact</summary>
 
 | File                                                                                   | Summary                                                                                                                                                                                                              |
-| ---                                                                                    | ---                                                                                                                                                                                                                  |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [page.jsx](https://github.com/cortex225/portfolio-jl/blob/master/app/contact/page.jsx) | Showcases Contact section UI with key details such as text, illustrations, contact information, and a form. Utilizes Socials component for social icons display. Designed for the portfolio-jl website architecture. |
 
 </details>
@@ -207,7 +208,7 @@ The portfolio-jl project is a dynamic portfolio website built with Next.js and R
 <details closed><summary>lib</summary>
 
 | File                                                                           | Summary                                                                                        |
-| ---                                                                            | ---                                                                                            |
+| ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
 | [utils.js](https://github.com/cortex225/portfolio-jl/blob/master/lib/utils.js) | Combines CSS classes using Tailwind CSS utilities for better styling in the portfolio website. |
 
 </details>
@@ -215,20 +216,20 @@ The portfolio-jl project is a dynamic portfolio website built with Next.js and R
 <details closed><summary>hooks</summary>
 
 | File                                                                                                       | Summary                                                                                                                                                                              |
-| ---                                                                                                        | ---                                                                                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [useScrollProgress.jsx](https://github.com/cortex225/portfolio-jl/blob/master/hooks/useScrollProgress.jsx) | Calculates scroll progress percentage in a custom React hook. Monitors scrolling events and updates the progress state based on scroll position relative to total scrollable height. |
 
 </details>
 
 ---
 
-##  Getting Started
+## Getting Started
 
 **System Requirements:**
 
-* **JavaScript**: `version x.y.z`
+- **JavaScript**: `version x.y.z`
 
-###  Installation
+### Installation
 
 <h4>From <code>source</code></h4>
 
@@ -239,42 +240,46 @@ The portfolio-jl project is a dynamic portfolio website built with Next.js and R
 > ```
 >
 > 2. Change to the project directory:
+>
 > ```console
 > $ cd portfolio-jl
 > ```
 >
 > 3. Install the dependencies:
+>
 > ```console
 > $ npm install
 > ```
 
-###  Usage
+### Usage
 
 <h4>From <code>source</code></h4>
 
 > Run portfolio-jl using the command below:
+>
 > ```console
 > $ node app.js
 > ```
 
-###  Tests
+### Tests
 
 > Run the test suite using the command below:
+>
 > ```console
 > $ npm test
 > ```
 
 ---
 
-##  Project Roadmap
+## Project Roadmap
 
-- [X] `► INSERT-TASK-1`
+- [x] `► INSERT-TASK-1`
 - [ ] `► INSERT-TASK-2`
 - [ ] `► ...`
 
 ---
 
-##  Contributing
+## Contributing
 
 Contributions are welcome! Here are several ways you can contribute:
 
@@ -319,13 +324,13 @@ Contributions are welcome! Here are several ways you can contribute:
 
 ---
 
-##  License
+## License
 
 This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
 
 ---
 
-##  Acknowledgments
+## Acknowledgments
 
 - List any resources, contributors, inspiration, etc. here.
 
