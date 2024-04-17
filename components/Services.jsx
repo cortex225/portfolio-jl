@@ -16,12 +16,12 @@ const servicesData = [
   },
   {
     title: 'Mobile Development',
-    description: 'I build mobile applications using React Native.',
+    description: 'I build mobile applications using flutter.',
     icon: <Blocks size={72} strokeWidth={0.8} />
   },
   {
     title: 'Backend Development',
-    description: 'I build backend applications using NodeJS and Express.',
+    description: 'I build backend applications using .NET, .',
     icon: <Gem size={72} strokeWidth={0.8} />
   }
 ]
