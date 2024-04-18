@@ -12,6 +12,12 @@ import {
 import DevImg from "./DevImg";
 import Badge from "./Badge";
 import Socials from "./Socials";
+import { TextGenerateEffect } from "./ui/text-generate-effect";
+import BadgeSkills from "./BadgeSkills";
+import IconReact from "./icons/IconReact";
+import IconNextjs from "./icons/IconNextjs";
+import IconPostgresql from "./icons/IconPostgresql";
+import { PinContainer } from "./ui/pinContainer";
 
 const Hero = () => {
   return (
@@ -23,11 +29,15 @@ const Hero = () => {
             <div className=" text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
               Web Developer
             </div>
-            <h1 className="h1 mb-4">Hello, my name is Jean-Luc Gouaho</h1>
-            <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-              I&apos;m a web developer based in Canada. I have a passion for web
-              development and love to create for web and mobile applications.
-            </p>
+            <TextGenerateEffect
+              words="Hello, my name is Jean-Luc Gouaho"
+              className="h1 mb-4  w-full xl:mx-0"
+            />
+            <TextGenerateEffect
+              words="I'm a web developer based in Canada. I have a passion for web
+              development and love to create for web and mobile applications."
+              className={"subtitle max-w-[490px] mx-auto xl:mx-0"}
+            />
             {/* button CTA */}
             <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
               <Link href="/contact">
@@ -42,7 +52,6 @@ const Hero = () => {
                   Download CV <Download size={18} />
                 </Button>
               </a>
-
             </div>
             {/* social */}
             <Socials
@@ -51,28 +60,20 @@ const Hero = () => {
             />
           </div>
           {/* image */}
-          <div className="hidden xl:flex relative">
+          <div className="hidden xl:flex relative ">
             {/* badge annee experience */}
-            <Badge
+            <BadgeSkills
               className="px-4"
-              containerStyles="absolute top-[24%] -left-[5rem]"
-              icon={<RiBriefcase4Fill />}
-              endCountNum={2} // Nombre d'années d'experience
-              badgeText="Years Of Experience"
+              containerStyles="absolute top-[24%] -left-[2rem]"
+              icon={<IconReact />}
             />
-            <Badge
+            <BadgeSkills
               containerStyles="absolute top-[80%] -left-[1rem]"
-              icon={<RiTodoFill />}
-              endCountNum={6}
-              endCountText="k"
-              badgeText="Finished Projects"
+              icon={<IconNextjs />}
             />
-            <Badge
+            <BadgeSkills
               containerStyles="absolute top-[55%] -right-8"
-              icon={<RiTeamFill />}
-              endCountNum={2}
-              endCountText="k"
-              badgeText="Happy Clients"
+              icon={<IconPostgresql />}
             />
 
             <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2" />
@@ -86,6 +87,14 @@ const Hero = () => {
         <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12 animate-bounce">
           <RiArrowDownSLine className="text-3xl text-primary" />
         </div>
+      </div>
+
+      <div className="xl:hidden md:flex justify-center my-8 gap-4">
+        <BadgeSkills containerStyles="" icon={<IconPostgresql />} />
+        <BadgeSkills containerStyles="" icon={<IconPostgresql />} />
+        <BadgeSkills containerStyles="" icon={<IconPostgresql />} />
+        <BadgeSkills containerStyles="" icon={<IconPostgresql />} />
+        <BadgeSkills containerStyles="" icon={<IconPostgresql />} />
       </div>
     </section>
   );

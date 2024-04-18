@@ -62,7 +62,7 @@
 }
 
 .h1 {
-  @apply text-6xl xl:text-[72px] xl:leading-[80px] tracking-[-2px] font-bold;
+  @apply text-6xl  xl:leading-[70px] tracking-[-2px] font-bold;
 }
 
 .h2 {
@@ -88,6 +88,10 @@
 
 .badge {
   @apply z-10 w-[200px] h-[68px] bg-white dark:backdrop-blur-[44px] shadow-2xl rounded-[10px] flex items-center gap-x-4;
+}
+
+.badgeSkills {
+  @apply z-10 w-[80px] h-[80px] bg-white dark:backdrop-blur-[44px] shadow-2xl rounded-[16px] flex items-center gap-x-4;
 }
 
 /* swiper bullet styles*/
