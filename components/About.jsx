@@ -1,6 +1,6 @@
-import DevImg from '@/components/DevImg'
-import Image from 'next/image'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import DevImg from "@/components/DevImg";
+import Image from "next/image";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import {
   Briefcase,
@@ -9,208 +9,208 @@ import {
   HomeIcon,
   MailIcon,
   PhoneCall,
-  User2
-} from 'lucide-react'
+  User2,
+} from "lucide-react";
 
 const infoData = [
   {
     icon: <User2 size={24} />,
-    text: 'Jean-Luc Gouaho'
+    text: "Jean-Luc Gouaho",
   },
   {
     icon: <PhoneCall size={24} />,
-    text: '+ 1 450 521 1098'
+    text: "+ 1 450 521 1098",
   },
   {
     icon: <MailIcon size={24} />,
-    text: 'jlgouaho@gmail.com'
+    text: "jlgouaho@gmail.com",
   },
   {
     icon: <Calendar size={24} />,
-    text: 'Born on 1st Augut 1999'
+    text: "Born on 1st Augut 1999",
   },
   {
     icon: <GraduationCap size={24} />,
-    text: 'DEC in Computer Science'
+    text: "DEC in Computer Science",
   },
   {
     icon: <HomeIcon size={24} />,
-    text: 'Canada'
-  }
-]
+    text: "Canada",
+  },
+];
 
 const skillsData = [
   {
-    title: 'skills',
+    title: "skills",
     data: [
       {
-        name: '.NET',
-        iconPath: '/about/vscode.svg'
+        name: ".NET",
+        iconPath: "/about/vscode.svg",
       },
       {
-        name: 'Next',
-        iconPath: '/about/vscode.svg'
+        name: "Next",
+        iconPath: "/about/vscode.svg",
       },
       {
-        name: 'Tailwind',
-        iconPath: '/about/vscode.svg'
+        name: "Tailwind",
+        iconPath: "/about/vscode.svg",
       },
       {
-        name: 'Sass',
-        iconPath: '/about/vscode.svg'
+        name: "Sass",
+        iconPath: "/about/vscode.svg",
       },
       {
-        name: 'Framer Motion',
-        iconPath: '/about/vscode.svg'
+        name: "Framer Motion",
+        iconPath: "/about/vscode.svg",
       },
       {
-        name: 'Framer Motion',
-        iconPath: '/about/vscode.svg'
-      }
-    ]
+        name: "Framer Motion",
+        iconPath: "/about/vscode.svg",
+      },
+    ],
   },
   {
-    title: 'frontend',
+    title: "frontend",
     data: [
       {
-        name: 'JavaScript',
-        iconPath: '/about/vscode.svg'
+        name: "JavaScript",
+        iconPath: "/about/vscode.svg",
       },
       {
-        name: 'React',
-        iconPath: '/about/vscode.svg'
+        name: "React",
+        iconPath: "/about/vscode.svg",
       },
       {
-        name: 'Vue.js',
-        iconPath: '/about/vscode.svg'
-      }
-    ]
+        name: "Vue.js",
+        iconPath: "/about/vscode.svg",
+      },
+    ],
   },
   {
-    title: 'backend',
+    title: "backend",
     data: [
       {
-        name: 'C#',
-        iconPath: '/about/vscode.svg'
+        name: "C#",
+        iconPath: "/about/vscode.svg",
       },
       {
-        name: '.NET Framework',
-        iconPath: '/about/vscode.svg'
+        name: ".NET Framework",
+        iconPath: "/about/vscode.svg",
       },
       {
-        name: 'SQL',
-        iconPath: '/about/vscode.svg'
+        name: "SQL",
+        iconPath: "/about/vscode.svg",
       },
       {
-        name: 'NoSQL',
-        iconPath: '/about/vscode.svg'
-      }
-    ]
+        name: "NoSQL",
+        iconPath: "/about/vscode.svg",
+      },
+    ],
   },
   {
-    title: 'devOps',
+    title: "devOps",
     data: [
       {
-        name: 'Docker',
-        iconPath: '/about/vscode.svg'
+        name: "Docker",
+        iconPath: "/about/vscode.svg",
       },
       {
-        name: 'Azure Cloud',
-        iconPath: '/about/vscode.svg'
+        name: "Azure Cloud",
+        iconPath: "/about/vscode.svg",
       },
       {
-        name: 'AWS',
-        iconPath: '/about/vscode.svg'
+        name: "AWS",
+        iconPath: "/about/vscode.svg",
       },
       {
-        name: 'NoSQL',
-        iconPath: '/about/vscode.svg'
-      }
-    ]
+        name: "NoSQL",
+        iconPath: "/about/vscode.svg",
+      },
+    ],
   },
   {
-    title: 'Additional Key Technologies',
+    title: "Additional Key Technologies",
     data: [
       {
-        name: 'AGILE/SCRUM',
-        iconPath: '/about/vscode.svg'
+        name: "AGILE/SCRUM",
+        iconPath: "/about/vscode.svg",
       },
       {
-        name: 'WordPress',
-        iconPath: '/about/vscode.svg'
-      }
-    ]
+        name: "WordPress",
+        iconPath: "/about/vscode.svg",
+      },
+    ],
   },
   {
-    title: 'tools',
+    title: "tools",
     data: [
       {
-        imgPath: '/about/vscode.svg',
-        name: 'VS Code'
+        imgPath: "/about/vscode.svg",
+        name: "VS Code",
       },
       {
-        imgPath: '/about/figma.svg',
-        name: 'Figma'
+        imgPath: "/about/figma.svg",
+        name: "Figma",
       },
       {
-        imgPath: '/about/notion.svg',
-        name: 'IntelliJ'
+        imgPath: "/about/notion.svg",
+        name: "IntelliJ",
       },
       {
-        imgPath: '/about/wordpress.svg',
-        name: 'Wordpress'
-      }
-    ]
-  }
-]
+        imgPath: "/about/wordpress.svg",
+        name: "Wordpress",
+      },
+    ],
+  },
+];
 
 const qualificationsData = [
   {
-    title: 'education',
+    title: "education",
     data: [
       {
-        university: 'Cegep de Granby',
-        qualification: 'DEC in Computer Science and Management',
-        years: 'Québec, Canada - 2024'
+        university: "Cegep de Granby",
+        qualification: "DEC in Computer Science and Management",
+        years: "Québec, Canada - 2024",
       },
       {
-        university: 'College le Figuier',
-        qualification: 'Hight School Degree',
-        years: "Abidjan, Côte d'Ivoire - 2017"
-      }
-    ]
+        university: "College le Figuier",
+        qualification: "Hight School Degree",
+        years: "Abidjan, Côte d'Ivoire - 2017",
+      },
+    ],
   },
   {
-    title: 'experience',
+    title: "experience",
     data: [
       {
-        company: 'Royal Broker Solutions',
-        role: 'Web Developer',
-        years: 'August 2022 - Now'
+        company: "Royal Broker Solutions",
+        role: "Web Developer",
+        years: "August 2022 - Now",
       },
       {
-        company: 'Royal Broker Solutions',
-        role: 'Stage Web Developer',
-        years: 'April 2022 - August 2022'
+        company: "Royal Broker Solutions",
+        role: "Stage Web Developer",
+        years: "April 2022 - August 2022",
       },
       {
-        company: 'Rogers Communication',
-        role: 'Seller Specialist',
-        years: 'November 2021 - Avril 2022'
+        company: "Rogers Communication",
+        role: "Seller Specialist",
+        years: "November 2021 - Avril 2022",
       },
       {
-        company: 'Best Buy',
-        role: 'Customer Service',
-        years: 'October 2020 - November 2021'
-      }
-    ]
-  }
-]
+        company: "Best Buy",
+        role: "Customer Service",
+        years: "October 2020 - November 2021",
+      },
+    ],
+  },
+];
 
 const About = () => {
   const getData = (arr, title) => {
-    return arr.find((item) => item.title === title)
-  }
+    return arr.find((item) => item.title === title);
+  };
 
   return (
     <section className="xl:h-[860px pb-12 xl:py-24">
@@ -236,7 +236,8 @@ const About = () => {
                 </TabsTrigger>
                 <TabsTrigger
                   className="w-[162px] xl:w-auto"
-                  value="qualifications">
+                  value="qualifications"
+                >
                   Qualifications
                 </TabsTrigger>
                 <TabsTrigger className="w-[162px] xl:w-auto" value="skills">
@@ -264,7 +265,8 @@ const About = () => {
                         return (
                           <div
                             key={index}
-                            className="flex items-center gap-x-4 mx-auto xl:mx-0">
+                            className="flex items-center gap-x-4 mx-auto xl:mx-0"
+                          >
                             <div className="text-primary">{item.icon}</div>
                             <div>{item.text}</div>
                           </div>
@@ -312,7 +314,8 @@ const About = () => {
                               return (
                                 <div
                                   className=" flex gap-x-8 group "
-                                  key={index}>
+                                  key={index}
+                                >
                                   <div className="h-[84px w-[1px] bg-border relative ml-2.5">
                                     <div className="w-[11px] h-[11px] rounded-full bg-primary absolute  -left-[5px] group-hover:translate-y-[84px] transition-all duration-500" />
                                   </div>
@@ -330,7 +333,7 @@ const About = () => {
                                   </div>
                                 </div>
                               );
-                            }
+                            },
                           )}
                         </div>
                       </div>
@@ -350,7 +353,8 @@ const About = () => {
                               return (
                                 <div
                                   className=" flex gap-x-8 group mt-1"
-                                  key={index}>
+                                  key={index}
+                                >
                                   <div className="h-[84px w-[1px] bg-border relative ml-2.5">
                                     <div className="w-[11px] h-[11px] rounded-full bg-primary absolute  -left-[5px] group-hover:translate-y-[84px] transition-all duration-500" />
                                   </div>
@@ -368,7 +372,7 @@ const About = () => {
                                   </div>
                                 </div>
                               );
-                            }
+                            },
                           )}
                         </div>
                       </div>
@@ -390,7 +394,8 @@ const About = () => {
                             return (
                               <div
                                 className="flex items-center gap-x-4 mb-4"
-                                key={index}>
+                                key={index}
+                              >
                                 <div className="text-primary">
                                   <Image
                                     src={item.iconPath}
@@ -402,7 +407,7 @@ const About = () => {
                                 <div>{item.name}</div>
                               </div>
                             );
-                          }
+                          },
                         )}
                       </div>
                       <div className="grid md:grid-cols-2 gap-y-8 ">
@@ -411,7 +416,8 @@ const About = () => {
                             return (
                               <div
                                 className="flex items-center gap-x-4 mb-4"
-                                key={index}>
+                                key={index}
+                              >
                                 <div className="text-primary">
                                   <Image
                                     src={item.iconPath}
@@ -423,7 +429,7 @@ const About = () => {
                                 <div>{item.name}</div>
                               </div>
                             );
-                          }
+                          },
                         )}
                       </div>
                     </div>
@@ -438,7 +444,8 @@ const About = () => {
                             return (
                               <div
                                 className="flex items-center gap-x-4 mb-4"
-                                key={index}>
+                                key={index}
+                              >
                                 <div className="text-primary">
                                   <Image
                                     src={item.imgPath}
@@ -450,7 +457,7 @@ const About = () => {
                                 <div>{item.name}</div>
                               </div>
                             );
-                          }
+                          },
                         )}
                       </div>
                     </div>
@@ -463,5 +470,5 @@ const About = () => {
       </div>
     </section>
   );
-}
-export default About
+};
+export default About;
