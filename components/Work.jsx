@@ -1,67 +1,66 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { Button } from './ui/button'
+import Link from "next/link";
+import { Button } from "./ui/button";
 
 // import swiper styles
-import 'swiper/css'
-import 'swiper/css/pagination'
+import "swiper/css";
+import "swiper/css/pagination";
 
 // import required modules
-import { Pagination } from 'swiper/modules'
+import { Pagination } from "swiper/modules";
 
 // components
-import ProjectCard from '@/components/ProjectCard'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import ProjectCard from "@/components/ProjectCard";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const projectData = [
   {
-    image: '/work/1.png',
-    category: 'Web Development',
-    name: 'InstaHR',
+    image: "/work/1.png",
+    category: "Web Development",
+    name: "InstaHR",
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur.',
-    link: '/',
-    github: '/'
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur.",
+    link: "/",
+    github: "/",
   },
   {
-    image: '/work/2.png',
-    category: 'Web Development',
-    name: 'Project 2',
+    image: "/work/2.png",
+    category: "Web Development",
+    name: "Project 2",
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur.',
-    link: '/',
-    github: '/'
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur.",
+    link: "/",
+    github: "/",
   },
   {
-    image: '/work/3.png',
-    category: 'Web Development',
-    name: 'Project 3',
+    image: "/work/3.png",
+    category: "Web Development",
+    name: "Project 3",
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur.',
-    link: '/',
-    github: '/'
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur.",
+    link: "/",
+    github: "/",
   },
   {
-    image: '/work/4.png',
-    category: 'Web Development',
-    name: 'Project 4',
+    image: "/work/4.png",
+    category: "Web Development",
+    name: "Project 4",
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur.',
-    link: '/',
-    github: '/'
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur.",
+    link: "/",
+    github: "/",
   },
   {
-    image: '/work/4.png',
-    category: 'Web Development',
-    name: 'Project 5',
+    image: "/work/4.png",
+    category: "Web Development",
+    name: "Project 5",
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur.',
-    link: '/',
-    github: '/'
-  }
-]
-
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, consequatur.",
+    link: "/",
+    github: "/",
+  },
+];
 
 const Work = () => {
   return (
@@ -71,8 +70,8 @@ const Work = () => {
         <div className="max-w-[400px] mx-auto xl:mx-0 text-center xk:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start">
           <h2 className="section-title mb-4"> Lastest Projects</h2>
           <p className="subtitle mb-8 flex text-start justify-start">
-            There my most recent projects, showcasing my skills in
-            full-stack development and modern technology integration.
+            There my most recent projects, showcasing my skills in full-stack
+            development and modern technology integration.
           </p>
           <Link href="/work">
             <Button className="mt-4">View All Projects</Button>
@@ -91,7 +90,8 @@ const Work = () => {
               },
             }}
             modules={[Pagination]}
-            pagination={{ clickable: true }}>
+            pagination={{ clickable: true }}
+          >
             {/*  Show only the 4 projects for the slides  */}
             {projectData.slice(0, 4).map((project, index) => {
               return (
@@ -105,5 +105,5 @@ const Work = () => {
       </div>
     </section>
   );
-}
-export default Work
+};
+export default Work;

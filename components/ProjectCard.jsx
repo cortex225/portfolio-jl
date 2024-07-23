@@ -14,7 +14,8 @@ const ProjectCard = ({ project }) => {
           className={
             "relative w-full h-[300px] flex items-center justify-center bg-tertiary dark:bg-secondary/40 " +
             "xl:bg-work_project_bg_light xl:bg-[110%] dark:xl:bg-work_project_bg_dark xl:bg-no-repeat overflow-hidden"
-          }>
+          }
+        >
           <Image
             className="absolute bottom-0 shadow-2xl"
             src={project.image}
@@ -30,7 +31,8 @@ const ProjectCard = ({ project }) => {
               className={
                 "bg-secondary w-[54px] h-[54px] rounded-full flex justify-center items-center " +
                 "scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-400"
-              }>
+              }
+            >
               <Link2Icon className="text-white" />
             </Link>
             <Link
@@ -38,7 +40,8 @@ const ProjectCard = ({ project }) => {
               className={
                 "bg-secondary w-[54px] h-[54px] rounded-full flex justify-center items-center" +
                 " scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-500"
-              }>
+              }
+            >
               <Github className="text-white" />
             </Link>
           </div>
