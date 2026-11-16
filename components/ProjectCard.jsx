@@ -1,57 +1,71 @@
-import Link from "next/link";
-import Image from "next/image";
-import { Card, CardHeader } from "@/components/ui/card";
-import { Github, Link2Icon } from "lucide-react";
-import { Badge } from "./ui/badge";
+import Image from 'next/image'
+import { ArrowUpRight, Github } from 'lucide-react'
 
-const ProjectCard = ({ project }) => {
-  console.log(project);
+import { Card } from '@/components/ui/card'
+import { Badge } from './ui/badge'
+
+const ProjectCard = ({ project, priority = false }) => {
   return (
-    <Card className=" group overflow-hidden relative">
-      <CardHeader className=" p-0">
-        {/*  image  */}
-        <div
-          className={
-            "relative w-full h-[300px] flex items-center justify-center bg-tertiary dark:bg-secondary/40 " +
-            "xl:bg-work_project_bg_light xl:bg-[110%] dark:xl:bg-work_project_bg_dark xl:bg-no-repeat overflow-hidden"
-          }>
+    <Card className='group flex h-full flex-col overflow-hidden'>
+      <div className='relative aspect-[16/10] overflow-hidden border-b border-border bg-tertiary dark:bg-secondary/40'>
+        <Image
+          src={project.image}
+          alt={project.imageAlt}
+          fill
+          priority={priority}
+          sizes='(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw'
+          className={`object-cover object-top transition-transform duration-500 motion-safe:group-hover:scale-[1.02] ${project.imageDark ? 'dark:hidden' : ''}`}
+        />
+        {project.imageDark && (
           <Image
-            className="absolute bottom-0 shadow-2xl"
-            src={project.image}
-            width={247}
-            height={250}
-            alt="image project"
-            priority
+            src={project.imageDark}
+            alt={project.imageAlt}
+            fill
+            sizes='(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw'
+            className='hidden object-cover object-top transition-transform duration-500 motion-safe:group-hover:scale-[1.02] dark:block'
           />
-          {/*  btns  links */}
-          <div className="flex gap-x-4">
-            <Link
-              href={project.link}
-              className={
-                "bg-secondary w-[54px] h-[54px] rounded-full flex justify-center items-center " +
-                "scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-400"
-              }>
-              <Link2Icon className="text-white" />
-            </Link>
-            <Link
-              href={project.github}
-              className={
-                "bg-secondary w-[54px] h-[54px] rounded-full flex justify-center items-center" +
-                " scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-500"
-              }>
-              <Github className="text-white" />
-            </Link>
-          </div>
-        </div>
-      </CardHeader>
-      <div className="h-full px-8 py-6">
-        <Badge className="uppercase text-sm font-medium mb-2 absolute top-4 left-5">
+        )}
+        <Badge className='absolute left-5 top-4 text-sm font-medium uppercase'>
           {project.category}
         </Badge>
-        <h4 className="h4 mb-1">{project.name}</h4>
-        <p className="text-muted-foreground text-lg">{project.description}</p>
+      </div>
+      <div className='flex flex-1 flex-col px-8 py-6'>
+        <h3 className='h4 mb-2'>{project.name}</h3>
+        <p className='mb-4 text-lg text-muted-foreground'>{project.summary}</p>
+        <ul className='mb-6 flex flex-wrap gap-2' aria-label='Tech stack'>
+          {project.stack.map((tech) => (
+            <li key={tech} className='rounded-full border border-border px-2.5 py-0.5 text-sm'>
+              {tech}
+            </li>
+          ))}
+        </ul>
+        <div className='mt-auto flex gap-x-6 text-base font-medium'>
+          {project.live && (
+            <a
+              href={project.live}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='inline-flex items-center gap-1 text-primary hover:underline'
+            >
+              Live site <ArrowUpRight size={18} aria-hidden='true' />
+              <span className='sr-only'>(opens in a new tab)</span>
+            </a>
+          )}
+          {project.github && (
+            <a
+              href={project.github}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='inline-flex items-center gap-1 hover:text-primary hover:underline'
+            >
+              <Github size={18} aria-hidden='true' /> Source
+              <span className='sr-only'>(opens in a new tab)</span>
+            </a>
+          )}
+        </div>
       </div>
     </Card>
-  );
-};
-export default ProjectCard;
+  )
+}
+
+export default ProjectCard
