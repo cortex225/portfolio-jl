@@ -2,10 +2,8 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{js,jsx}",
     "./components/**/*.{js,jsx}",
     "./app/**/*.{js,jsx}",
-    "./src/**/*.{js,jsx}",
   ],
   prefix: "",
   theme: {
@@ -67,16 +65,6 @@ module.exports = {
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
-          orbit: {
-            "0%": {
-              transform:
-                "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
-            },
-            "100%": {
-              transform:
-                "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
-            },
-          },
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
@@ -86,7 +74,6 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        orbit: "orbit calc(var(--duration)*1s) linear infinite",
       },
       backgroundImage: {
         hero: "url(/hero/hero-bg.png)",
@@ -97,8 +84,6 @@ module.exports = {
         dots_dark: "url(/dots-dark.svg)",
         about_shape_light: "url(/about/shape-light.svg)",
         about_shape_dark: "url(/about/shape-dark.svg)",
-        work_project_bg_light: "url(/work/project-bg-light.png)",
-        work_project_bg_dark: "url(/work/project-bg-dark.png)",
         contact_illustration_light: "url(/contact/illustration-light.svg)",
         contact_illustration_dark: "url(/contact/illustration-dark.svg)",
       },
