@@ -3,13 +3,13 @@ import Image from 'next/image'
 
 function Logo () {
   return (
-    <Link href='/'>
+    <Link href='/' aria-label='Jean-Luc Gouaho, home'>
       <Image
-        className='rounded-xl'
+        className='h-auto w-[72px] rounded-xl xl:w-[90px]'
         src='/logo3.svg'
-        alt='Logo'
+        alt=''
         width={90}
-        height={0}
+        height={61}
         priority
       />
     </Link>

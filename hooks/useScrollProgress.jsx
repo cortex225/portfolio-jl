@@ -1,34 +1,23 @@
-// Importation des hooks nécessaires depuis React
 import { useEffect, useState } from 'react'
 
-// Définition du hook personnalisé useScrollProgress
+// Returns how far the page is scrolled, from 0 to 100.
 const useScrollProgress = () => {
-  // Définition de l'état local 'completion' qui représente le pourcentage de progression du défilement
   const [completion, setCompletion] = useState(0)
 
-  // Utilisation du hook useEffect pour gérer les effets de bord
   useEffect(() => {
-    // Définition de la fonction qui met à jour la progression du défilement
-    const UpdateScrollCompletion = () => {
-      // Récupération de la position actuelle de défilement
-      const currentProgress = window.scrollY
-      // Calcul de la hauteur totale de défilement possible
-      const scrollHeight = document.body.scrollHeight - window.innerHeight
-
-      // Si la hauteur de défilement est non nulle, mise à jour de 'completion'
-      if (scrollHeight) {
-        setCompletion(Number(currentProgress / scrollHeight).toFixed(2) * 100)
-      }
+    const update = () => {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight
+      setCompletion(scrollable > 0 ? Math.round((window.scrollY / scrollable) * 100) : 0)
     }
+    update()
+    window.addEventListener('scroll', update, { passive: true })
+    window.addEventListener('resize', update)
+    return () => {
+      window.removeEventListener('scroll', update)
+      window.removeEventListener('resize', update)
+    }
+  }, [])
 
-    // Ajout d'un écouteur d'événement sur le défilement de la fenêtre pour mettre à jour 'completion'
-    window.addEventListener('scroll', UpdateScrollCompletion)
-
-    // Retour d'une fonction de nettoyage qui supprime l'écouteur d'événement lors du démontage du composant
-    return () => window.removeEventListener('scroll', UpdateScrollCompletion)
-  }, []) // Le tableau vide en deuxième argument signifie que cet effet ne dépend d'aucune prop ou état
-
-  // Le hook retourne un div vide, cela pourrait être modifié pour retourner la valeur de 'completion' ou autre chose
   return completion
 }
 

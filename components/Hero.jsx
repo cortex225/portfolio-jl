@@ -1,104 +1,92 @@
-import Link from "next/link";
-import { Button } from "./ui/button";
-import { Download, Send } from "lucide-react";
+import Link from 'next/link'
+import { Download, Send } from 'lucide-react'
+import { RiArrowDownSLine } from 'react-icons/ri'
 
-import {
-  RiArrowDownSLine,
-  RiBriefcase4Fill,
-  RiTeamFill,
-  RiTodoFill,
-} from "react-icons/ri";
-
-import DevImg from "./DevImg";
-import Badge from "./Badge";
-import Socials from "./Socials";
-import { TextGenerateEffect } from "./ui/text-generate-effect";
-import BadgeSkills from "./BadgeSkills";
-import IconReact from "./icons/IconReact";
-import IconNextjs from "./icons/IconNextjs";
-import IconPostgresql from "./icons/IconPostgresql";
-import { PinContainer } from "./ui/pinContainer";
-import OrbitingCircles from "./magicui/orbiting-circles";
+import { Button } from './ui/button'
+import DevImg from './DevImg'
+import Socials from './Socials'
+import BadgeSkills from './BadgeSkills'
+import IconReact from './icons/IconReact'
+import IconNextjs from './icons/IconNextjs'
+import IconPostgresql from './icons/IconPostgresql'
+import { profile } from '@/data/profile'
 
 const Hero = () => {
   return (
-    <section className="py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom dark:bg-none bg-cover">
-      <div className="container mx-auto">
-        <div className="flex justify-between gap-x-8">
-          {/* text */}
-          <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
-            <div className=" text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
-              Full Stack Developer
+    <section className='relative bg-hero bg-cover bg-bottom bg-no-repeat py-12 dark:bg-none xl:min-h-[84vh] xl:py-24 xl:pt-28'>
+      <div className='container mx-auto'>
+        <div className='flex justify-between gap-x-8'>
+          <div className='mx-auto flex max-w-[600px] flex-col justify-center text-center xl:mx-0 xl:text-left'>
+            <p className='mb-4 text-sm font-semibold uppercase tracking-[4px] text-primary'>
+              {profile.role}
+            </p>
+            <h1 className='h1 mb-4'>
+              Hi, I&apos;m <span className='whitespace-nowrap'>Jean-Luc</span> Gouaho
+            </h1>
+            <p className='subtitle mx-auto max-w-[490px] xl:mx-0'>
+              I build web apps end to end, from the database to the interface.
+              Lately: a budgeting app on top of Plaid, a prospecting tool on
+              Google Places and a recruiting platform for student athletes.
+            </p>
+            <div className='mx-auto mb-12 flex flex-col gap-3 md:flex-row xl:mx-0'>
+              <Button asChild className='gap-x-2'>
+                <Link href='/contact'>
+                  Contact me <Send size={18} aria-hidden='true' />
+                </Link>
+              </Button>
+              {profile.cv
+                ? (
+                  <Button asChild variant='secondary' className='gap-x-2'>
+                    <a href={profile.cv} download>
+                      Download CV <Download size={18} aria-hidden='true' />
+                    </a>
+                  </Button>
+                  )
+                : (
+                  <Button asChild variant='secondary' className='gap-x-2'>
+                    <Link href='/projects'>See my projects</Link>
+                  </Button>
+                  )}
             </div>
-            <TextGenerateEffect
-              words="Hi, I'm Jean-Luc Gouaho"
-              className="h1 mb-4  w-full xl:mx-0"
-            />
-            <TextGenerateEffect
-              words="A full-stack developer passionate about creating innovative web and mobile solutions."
-              className="subtitle max-w-[490px] mx-auto xl:mx-0"
-            />
-            {/* button CTA */}
-            <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
-              <Link href="/contact">
-                <Button className="gap-x-2">
-                  Contact me <Send size={18} />
-                </Button>
-              </Link>
-
-              {/* button download CV */}
-              <a href="../public/CV_JL.pdf" download>
-                <Button variant="secondary" className="gap-x-2">
-                  Download CV <Download size={18} />
-                </Button>
-              </a>
-            </div>
-            {/* social */}
             <Socials
-              containerStyles="flex gap-x-6 mx-auto xl:mx-0"
-              iconsStyles="text-foreground text-[26px] hover:text-primary transition-all"
+              containerStyles='mx-auto flex gap-x-6 xl:mx-0'
+              iconsStyles='text-foreground text-[26px] hover:text-primary transition-colors'
             />
           </div>
-          {/* image */}
-          <div className="hidden xl:flex relative ">
-            {/* badge annee experience */}
-
+          <div className='relative hidden xl:flex'>
             <BadgeSkills
-              className="px-4"
-              containerStyles="absolute top-[24%] -left-[2rem]"
+              containerStyles='absolute top-[24%] -left-[2rem]'
               icon={<IconReact />}
+              label='React'
             />
             <BadgeSkills
-              containerStyles="absolute top-[80%] -left-[1rem]"
+              containerStyles='absolute top-[80%] -left-[1rem]'
               icon={<IconNextjs />}
+              label='Next.js'
             />
             <BadgeSkills
-              containerStyles="absolute top-[55%] -right-8"
+              containerStyles='absolute top-[55%] -right-8'
               icon={<IconPostgresql />}
+              label='PostgreSQL'
             />
-
-            <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2" />
+            <div className='absolute -right-2 -top-1 h-[500px] w-[500px] bg-hero_shape2_light bg-no-repeat dark:bg-hero_shape2_dark' />
             <DevImg
-              containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"
-              imgSrc="/hero/jl-avatar.png"
+              containerStyles='bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom'
+              imgSrc='/hero/jl-avatar.png'
+              alt='Portrait of Jean-Luc Gouaho'
+              priority
             />
           </div>
         </div>
-        {/* icon */}
-        <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12 animate-bounce">
-          <RiArrowDownSLine className="text-3xl text-primary" />
+        <div
+          className='absolute bottom-12 left-1/2 hidden -translate-x-1/2 motion-safe:animate-bounce xl:flex'
+          aria-hidden='true'
+        >
+          <RiArrowDownSLine className='text-3xl text-primary' />
         </div>
-      </div>
-
-      <div className="xl:hidden md:flex justify-center my-8 gap-4">
-        <BadgeSkills containerStyles="" icon={<IconPostgresql />} />
-        <BadgeSkills containerStyles="" icon={<IconPostgresql />} />
-        <BadgeSkills containerStyles="" icon={<IconPostgresql />} />
-        <BadgeSkills containerStyles="" icon={<IconPostgresql />} />
-        <BadgeSkills containerStyles="" icon={<IconPostgresql />} />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero
