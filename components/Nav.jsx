@@ -1,33 +1,36 @@
+'use client'
+
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-
-// next hooks
 import { usePathname } from 'next/navigation'
 
 const links = [
-  { path: '/', name: 'home' },
-  { path: '/projects', name: 'my projects' },
-  { path: '/contact', name: 'contact' }
+  { path: '/', name: 'Home' },
+  { path: '/projects', name: 'Projects' },
+  { path: '/contact', name: 'Contact' }
 ]
 
-const Nav = ({ containerStyles, linkStyles, underLineStyles }) => {
+const Nav = ({ containerStyles, linkStyles, underLineStyles, onNavigate }) => {
   const path = usePathname()
   return (
-    <nav className={`${containerStyles}`}>
-      {links.map((link, index) => {
+    <nav className={containerStyles} aria-label='Main'>
+      {links.map((link) => {
+        const active = link.path === path
         return (
           <Link
-            key={index}
+            key={link.path}
             href={link.path}
-            className={`capitalize ${linkStyles}`}
+            className={linkStyles}
+            aria-current={active ? 'page' : undefined}
+            onClick={onNavigate}
           >
-            {link.path === path && (
+            {active && underLineStyles && (
               <motion.span
                 initial={{ y: '-100%' }}
                 animate={{ y: '0' }}
                 transition={{ type: 'tween' }}
                 layoutId='underline'
-                className={`${underLineStyles}`}
+                className={underLineStyles}
               />
             )}
             {link.name}

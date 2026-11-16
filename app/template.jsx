@@ -1,36 +1,21 @@
 'use client'
 
+import { MotionConfig } from 'framer-motion'
+
 import useScrollProgress from '@/hooks/useScrollProgress'
-import { motion } from 'framer-motion'
 
-// variants
-const variants = {
-  hidden: {
-    opacity: 0
-  },
-  enter: {
-    opacity: 1
-  }
-}
-
+// No page fade-in: content is visible on first paint and without JavaScript.
 const Template = ({ children }) => {
   const completion = useScrollProgress()
   return (
-    <>
-      <motion.main
-        variants={variants}
-        initial='hidden'
-        animate='enter'
-        transition={{ type: 'linear', delay: '0.2', duration: 0.4 }}
-      >
-        {children}
-      </motion.main>
-      {/* completion bar */}
+    <MotionConfig reducedMotion='user'>
+      <main id='main'>{children}</main>
       <span
+        aria-hidden='true'
         style={{ transform: `translateY(${completion - 100}%)` }}
-        className='fixed z-50 top-0 right-0 bottom-0 w-1 bg-primary transition-all duration-700'
+        className='fixed bottom-0 right-0 top-0 z-50 w-1 bg-primary transition-transform duration-300'
       />
-    </>
+    </MotionConfig>
   )
 }
 

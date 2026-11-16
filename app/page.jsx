@@ -3,17 +3,22 @@ import About from '@/components/About'
 import Services from '@/components/Services'
 import Work from '@/components/Work'
 import Cta from '@/components/Cta'
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
+import { pageMetadata } from '@/lib/seo'
+
+export const metadata = pageMetadata({
+  description:
+    'Jean-Luc Gouaho, full-stack developer in Quebec. React, Next.js, .NET and PostgreSQL. Projects: Budget Buddy, LeadMapper, PlayerConnect.',
+  path: '/'
+})
 
 export default function Home () {
   return (
-    <main>
+    <>
       <Hero />
       <About />
       <Services />
       <Work />
       <Cta />
-    </main>
+    </>
   )
 }

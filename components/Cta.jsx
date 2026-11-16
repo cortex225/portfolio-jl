@@ -1,22 +1,25 @@
-import { Button } from './ui/button'
 import Link from 'next/link'
-import { Fragment } from 'react'
+
+import { Button } from './ui/button'
 
 const Cta = () => {
   return (
-    <section className='py-24 bg-tertiary dark:bg-secondary/40'>
+    <section className='bg-tertiary py-24 dark:bg-secondary/40'>
       <div className='container mx-auto'>
         <div className='flex flex-col items-center'>
-          <h2 className='h2 max-w-xl text-center mb-8'>
-            Prepared to turn your ideas into reality? I&apos;m here to help you
-            with that.
+          <h2 className='h2 mb-4 max-w-xl text-center'>
+            Want to talk about a project?
           </h2>
-          <Link href='/contact'>
-            <Button>Let&apos;s Talk</Button>
-          </Link>
+          <p className='subtitle max-w-xl text-center'>
+            Tell me what you&apos;re working on and what you need.
+          </p>
+          <Button asChild>
+            <Link href='/contact'>Get in touch</Link>
+          </Button>
         </div>
       </div>
     </section>
   )
 }
+
 export default Cta
