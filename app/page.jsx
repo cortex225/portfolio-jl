@@ -11,7 +11,6 @@ export const metadata = pageMetadata({
   path: '/'
 })
 
-
 export default function Home () {
   return (
     <>

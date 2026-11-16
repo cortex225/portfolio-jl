@@ -21,7 +21,8 @@ const Hero = () => {
               {profile.role}
             </p>
             <h1 className='h1 mb-4'>
-              Hi, I&apos;m <span className='whitespace-nowrap'>Jean-Luc</span> Gouaho
+              Hi, I&apos;m <span className='whitespace-nowrap'>Jean-Luc</span>{' '}
+              Gouaho
             </h1>
             <p className='subtitle mx-auto max-w-[490px] xl:mx-0'>
               I build web apps end to end, from the database to the interface.

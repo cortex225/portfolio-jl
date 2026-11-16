@@ -3,7 +3,12 @@
 import { useState } from 'react'
 import { AlignJustify } from 'lucide-react'
 
-import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger
+} from '@/components/ui/sheet'
 import { Button } from './ui/button'
 import Nav from './Nav'
 import Logo from './Logo'
@@ -30,7 +35,10 @@ const MobileNav = () => {
               onNavigate={() => setOpen(false)}
             />
           </div>
-          <Socials containerStyles='flex gap-x-6' iconsStyles='text-3xl hover:text-primary' />
+          <Socials
+            containerStyles='flex gap-x-6'
+            iconsStyles='text-3xl hover:text-primary'
+          />
         </div>
       </SheetContent>
     </Sheet>

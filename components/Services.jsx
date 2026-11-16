@@ -32,7 +32,9 @@ const Services = () => {
   return (
     <section className='mb-12 xl:mb-36'>
       <div className='container mx-auto'>
-        <h2 className='section-title mx-auto mb-20 text-center xl:mb-24'>What I do</h2>
+        <h2 className='section-title mx-auto mb-20 text-center xl:mb-24'>
+          What I do
+        </h2>
         <div className='grid justify-items-center gap-y-20 xl:grid-cols-3 xl:gap-x-8'>
           {servicesData.map((item) => (
             <Card
@@ -46,7 +48,9 @@ const Services = () => {
               </CardHeader>
               <CardContent className='text-center'>
                 <CardTitle className='mb-4'>{item.title}</CardTitle>
-                <CardDescription className='text-lg'>{item.description}</CardDescription>
+                <CardDescription className='text-lg'>
+                  {item.description}
+                </CardDescription>
               </CardContent>
             </Card>
           ))}

@@ -30,24 +30,64 @@ const Form = () => {
   return (
     <form className='flex flex-col gap-y-4' onSubmit={handleSubmit}>
       <div className='flex flex-col gap-y-2'>
-        <Label className='pl-4 text-base' htmlFor='name'>Name</Label>
+        <Label className='pl-4 text-base' htmlFor='name'>
+          Name
+        </Label>
         <div className='relative flex items-center'>
-          <Input className='pr-14' id='name' name='name' autoComplete='name' required maxLength={100} />
-          <User className='absolute right-6 text-muted-foreground' size={20} aria-hidden='true' />
+          <Input
+            className='pr-14'
+            id='name'
+            name='name'
+            autoComplete='name'
+            required
+            maxLength={100}
+          />
+          <User
+            className='absolute right-6 text-muted-foreground'
+            size={20}
+            aria-hidden='true'
+          />
         </div>
       </div>
       <div className='flex flex-col gap-y-2'>
-        <Label className='pl-4 text-base' htmlFor='email'>Email</Label>
+        <Label className='pl-4 text-base' htmlFor='email'>
+          Email
+        </Label>
         <div className='relative flex items-center'>
-          <Input className='pr-14' id='email' name='email' type='email' autoComplete='email' required maxLength={200} />
-          <MailIcon className='absolute right-6 text-muted-foreground' size={20} aria-hidden='true' />
+          <Input
+            className='pr-14'
+            id='email'
+            name='email'
+            type='email'
+            autoComplete='email'
+            required
+            maxLength={200}
+          />
+          <MailIcon
+            className='absolute right-6 text-muted-foreground'
+            size={20}
+            aria-hidden='true'
+          />
         </div>
       </div>
       <div className='flex flex-col gap-y-2'>
-        <Label className='pl-4 text-base' htmlFor='message'>Message</Label>
+        <Label className='pl-4 text-base' htmlFor='message'>
+          Message
+        </Label>
         <div className='relative flex items-center'>
-          <Textarea className='py-4 pr-14' id='message' name='message' required minLength={10} maxLength={3000} />
-          <MessageSquare className='absolute right-6 top-4 text-muted-foreground' size={20} aria-hidden='true' />
+          <Textarea
+            className='py-4 pr-14'
+            id='message'
+            name='message'
+            required
+            minLength={10}
+            maxLength={3000}
+          />
+          <MessageSquare
+            className='absolute right-6 top-4 text-muted-foreground'
+            size={20}
+            aria-hidden='true'
+          />
         </div>
       </div>
       <Button type='submit' className='flex max-w-max items-center gap-x-1'>

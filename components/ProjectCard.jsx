@@ -34,7 +34,10 @@ const ProjectCard = ({ project, priority = false }) => {
         <p className='mb-4 text-lg text-muted-foreground'>{project.summary}</p>
         <ul className='mb-6 flex flex-wrap gap-2' aria-label='Tech stack'>
           {project.stack.map((tech) => (
-            <li key={tech} className='rounded-full border border-border px-2.5 py-0.5 text-sm'>
+            <li
+              key={tech}
+              className='rounded-full border border-border px-2.5 py-0.5 text-sm'
+            >
               {tech}
             </li>
           ))}

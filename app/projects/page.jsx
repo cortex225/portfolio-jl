@@ -35,35 +35,58 @@ const Projects = () => {
         </p>
         <div className='flex flex-col gap-24'>
           {projects.map((project, index) => (
-            <article key={project.slug} aria-labelledby={`${project.slug}-title`}>
+            <article
+              key={project.slug}
+              aria-labelledby={`${project.slug}-title`}
+            >
               <div className='mb-8 grid gap-8 lg:grid-cols-[2fr_3fr] lg:items-center'>
                 <div>
-                  <Badge className='mb-4 text-sm uppercase'>{project.category}</Badge>
+                  <Badge className='mb-4 text-sm uppercase'>
+                    {project.category}
+                  </Badge>
                   <h2 id={`${project.slug}-title`} className='h2 mb-4'>
                     {project.name}
                   </h2>
                   <p className='mb-4 text-xl'>{project.summary}</p>
-                  <p className='mb-6 text-lg text-muted-foreground'>{project.description}</p>
-                  <ul className='mb-6 flex flex-wrap gap-2' aria-label='Tech stack'>
+                  <p className='mb-6 text-lg text-muted-foreground'>
+                    {project.description}
+                  </p>
+                  <ul
+                    className='mb-6 flex flex-wrap gap-2'
+                    aria-label='Tech stack'
+                  >
                     {project.stack.map((tech) => (
-                      <li key={tech} className='rounded-full border border-border px-3 py-1 text-sm'>
+                      <li
+                        key={tech}
+                        className='rounded-full border border-border px-3 py-1 text-sm'
+                      >
                         {tech}
                       </li>
                     ))}
                   </ul>
                   <div className='flex gap-x-6 text-lg'>
                     {project.live && (
-                      <ExternalLink href={project.live} className='text-primary'>
+                      <ExternalLink
+                        href={project.live}
+                        className='text-primary'
+                      >
                         Live site <ArrowUpRight size={18} aria-hidden='true' />
                       </ExternalLink>
                     )}
                     {project.github
                       ? (
-                        <ExternalLink href={project.github} className='hover:text-primary'>
+                        <ExternalLink
+                          href={project.github}
+                          className='hover:text-primary'
+                        >
                           <Github size={18} aria-hidden='true' /> Source
                         </ExternalLink>
                         )
-                      : <span className='text-muted-foreground'>Private repository</span>}
+                      : (
+                        <span className='text-muted-foreground'>
+                          Private repository
+                        </span>
+                        )}
                   </div>
                 </div>
                 <div className='relative aspect-[16/10] overflow-hidden rounded-2xl border border-border shadow-lg'>
@@ -96,7 +119,11 @@ const Projects = () => {
                       src={shot.src}
                       alt={shot.alt}
                       fill
-                      sizes={shot.mobile ? '(min-width: 640px) 20vw, 66vw' : '(min-width: 640px) 40vw, 100vw'}
+                      sizes={
+                        shot.mobile
+                          ? '(min-width: 640px) 20vw, 66vw'
+                          : '(min-width: 640px) 40vw, 100vw'
+                      }
                       className='object-cover object-top'
                     />
                   </li>

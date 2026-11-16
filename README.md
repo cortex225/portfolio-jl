@@ -23,12 +23,12 @@ pnpm build
 
 ## Where to edit content
 
-| What | File |
-| --- | --- |
-| Name, contact links, experience, education, skills | `data/profile.js` |
-| Projects (text, stack, links, screenshots) | `data/projects.js` |
-| Screenshots | `public/work/<project>/` |
-| CV download | put the PDF in `public/` and set `cv` in `data/profile.js` (e.g. `'/CV_JL.pdf'`) |
+| What                                               | File                                                                             |
+| -------------------------------------------------- | -------------------------------------------------------------------------------- |
+| Name, contact links, experience, education, skills | `data/profile.js`                                                                |
+| Projects (text, stack, links, screenshots)         | `data/projects.js`                                                               |
+| Screenshots                                        | `public/work/<project>/`                                                         |
+| CV download                                        | put the PDF in `public/` and set `cv` in `data/profile.js` (e.g. `'/CV_JL.pdf'`) |
 
 The contact form has no backend: it opens the visitor's mail client with the
 message filled in.

@@ -7,7 +7,8 @@ import { pageMetadata } from '@/lib/seo'
 
 export const metadata = pageMetadata({
   title: 'Contact',
-  description: 'Get in touch with Jean-Luc Gouaho, full-stack developer in Quebec.',
+  description:
+    'Get in touch with Jean-Luc Gouaho, full-stack developer in Quebec.',
   path: '/contact'
 })
 
@@ -35,14 +36,16 @@ function Contact () {
         <div className='mb-6 grid pt-12 xl:mb-24 xl:h-[480px] xl:grid-cols-2'>
           <div className='flex flex-col justify-center'>
             <div className='mb-4 flex items-center gap-x-4 text-lg text-primary'>
-              <span className='h-[2px] w-[30px] bg-primary' aria-hidden='true' />
+              <span
+                className='h-[2px] w-[30px] bg-primary'
+                aria-hidden='true'
+              />
               Contact
             </div>
             <h1 className='h1 mb-8 max-w-md'>Get in touch</h1>
             <p className='subtitle max-w-[440px]'>
-              A question about one of my projects, an opportunity, or
-              something you&apos;re building: send a message or email me
-              directly.
+              A question about one of my projects, an opportunity, or something
+              you&apos;re building: send a message or email me directly.
             </p>
           </div>
           <div
@@ -57,8 +60,17 @@ function Contact () {
                 <li key={item.label} className='flex items-center gap-x-8'>
                   <span className='text-primary'>{item.icon}</span>
                   {item.href
-                    ? <a href={item.href} className='hover:text-primary hover:underline'>{item.label}</a>
-                    : <span>{item.label}</span>}
+                    ? (
+                      <a
+                        href={item.href}
+                        className='hover:text-primary hover:underline'
+                      >
+                        {item.label}
+                      </a>
+                      )
+                    : (
+                      <span>{item.label}</span>
+                      )}
                 </li>
               ))}
             </ul>

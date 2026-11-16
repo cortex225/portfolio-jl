@@ -58,10 +58,45 @@ export const education = [
 ]
 
 export const skills = [
-  { group: 'Frontend', items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'Vue.js', 'Tailwind CSS'] },
-  { group: 'Backend', items: ['C#', '.NET', 'Node.js', 'Express', 'Prisma', 'SQL', 'PostgreSQL', 'NoSQL'] },
-  { group: 'Cloud & DevOps', items: ['Docker', 'Vercel', 'Azure', 'AWS', 'Git'] },
-  { group: 'Tools & methods', items: ['VS Code', 'Rider', 'Figma', 'Notion', 'Agile / Scrum', 'WordPress'] }
+  {
+    group: 'Frontend',
+    items: [
+      'React',
+      'Next.js',
+      'TypeScript',
+      'JavaScript',
+      'Vue.js',
+      'Tailwind CSS'
+    ]
+  },
+  {
+    group: 'Backend',
+    items: [
+      'C#',
+      '.NET',
+      'Node.js',
+      'Express',
+      'Prisma',
+      'SQL',
+      'PostgreSQL',
+      'NoSQL'
+    ]
+  },
+  {
+    group: 'Cloud & DevOps',
+    items: ['Docker', 'Vercel', 'Azure', 'AWS', 'Git']
+  },
+  {
+    group: 'Tools & methods',
+    items: [
+      'VS Code',
+      'Rider',
+      'Figma',
+      'Notion',
+      'Agile / Scrum',
+      'WordPress'
+    ]
+  }
 ]
 
 export const languages = [

@@ -1,4 +1,10 @@
-import { Briefcase, GraduationCap, HomeIcon, MailIcon, User2 } from 'lucide-react'
+import {
+  Briefcase,
+  GraduationCap,
+  HomeIcon,
+  MailIcon,
+  User2
+} from 'lucide-react'
 
 import DevImg from '@/components/DevImg'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -24,8 +30,12 @@ const Timeline = ({ title, icon, items }) => (
             <div className='absolute -left-[5px] top-1 h-[11px] w-[11px] rounded-full bg-primary' />
           </div>
           <div>
-            <p className='mb-2 text-xl font-semibold leading-none'>{item.title}</p>
-            <p className='mb-3 text-lg leading-none text-muted-foreground'>{item.subtitle}</p>
+            <p className='mb-2 text-xl font-semibold leading-none'>
+              {item.title}
+            </p>
+            <p className='mb-3 text-lg leading-none text-muted-foreground'>
+              {item.subtitle}
+            </p>
             <p className='text-base font-medium'>{item.period}</p>
           </div>
         </li>
@@ -43,14 +53,19 @@ const About = () => {
       text: profile.email,
       href: `mailto:${profile.email}`
     },
-    { icon: <GraduationCap size={24} aria-hidden='true' />, text: education[0].degree },
+    {
+      icon: <GraduationCap size={24} aria-hidden='true' />,
+      text: education[0].degree
+    },
     { icon: <HomeIcon size={24} aria-hidden='true' />, text: profile.location }
   ]
 
   return (
     <section id='about' className='pb-12 xl:py-24'>
       <div className='container mx-auto'>
-        <h2 className='section-title mx-auto mb-8 text-center xl:mb-16'>About me</h2>
+        <h2 className='section-title mx-auto mb-8 text-center xl:mb-16'>
+          About me
+        </h2>
         <div className='flex flex-col xl:flex-row'>
           <div className='relative hidden flex-1 xl:flex'>
             <DevImg
@@ -74,19 +89,31 @@ const About = () => {
                     </h3>
                     <p className='subtitle mx-auto max-w-xl xl:mx-0'>
                       I started as an intern at Royal Broker Solutions in 2022
-                      and have worked there as a web developer since. Along
-                      the way I completed a DEC in computer science at Cégep
-                      de Granby (2024). I like owning a feature from the
-                      schema to the last pixel, and my side projects are
-                      where I try new stacks.
+                      and have worked there as a web developer since. Along the
+                      way I completed a DEC in computer science at Cégep de
+                      Granby (2024). I like owning a feature from the schema to
+                      the last pixel, and my side projects are where I try new
+                      stacks.
                     </p>
                     <ul className='mb-12 grid gap-4 xl:grid-cols-2'>
                       {infoData.map((item) => (
-                        <li key={item.text} className='mx-auto flex items-center gap-x-4 xl:mx-0'>
+                        <li
+                          key={item.text}
+                          className='mx-auto flex items-center gap-x-4 xl:mx-0'
+                        >
                           <span className='text-primary'>{item.icon}</span>
                           {item.href
-                            ? <a className='hover:text-primary hover:underline' href={item.href}>{item.text}</a>
-                            : <span>{item.text}</span>}
+                            ? (
+                              <a
+                                className='hover:text-primary hover:underline'
+                                href={item.href}
+                              >
+                                {item.text}
+                              </a>
+                              )
+                            : (
+                              <span>{item.text}</span>
+                              )}
                         </li>
                       ))}
                     </ul>
@@ -104,7 +131,9 @@ const About = () => {
                   </div>
                 </TabsContent>
                 <TabsContent value='qualifications'>
-                  <h3 className='h3 mb-8 text-center xl:text-left'>Experience and education</h3>
+                  <h3 className='h3 mb-8 text-center xl:text-left'>
+                    Experience and education
+                  </h3>
                   <div className='grid gap-y-12 md:grid-cols-2 md:gap-x-8'>
                     <Timeline
                       title='Experience'
@@ -132,7 +161,9 @@ const About = () => {
                     <div className='flex flex-col gap-y-8'>
                       {skills.map((group) => (
                         <div key={group.group}>
-                          <h4 className='mb-2 text-xl font-semibold'>{group.group}</h4>
+                          <h4 className='mb-2 text-xl font-semibold'>
+                            {group.group}
+                          </h4>
                           <div className='mb-4 border-b border-border' />
                           <ul className='flex flex-wrap justify-center gap-2 xl:justify-start'>
                             {group.items.map((item) => (
