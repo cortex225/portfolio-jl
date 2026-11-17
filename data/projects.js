@@ -30,7 +30,7 @@ export const projects = [
         mobile: true
       }
     ],
-    live: 'https://ai-budget-buddy-brown.vercel.app',
+    live: 'https://budget-buddy.jlgouaho.com',
     github: null
   },
   {
@@ -57,7 +57,7 @@ export const projects = [
         mobile: true
       }
     ],
-    live: 'https://lead-mapper.vercel.app',
+    live: 'https://lead-mapper.jlgouaho.com',
     github: 'https://github.com/cortex225/LeadMapper'
   },
   {
@@ -95,7 +95,7 @@ export const projects = [
         mobile: true
       }
     ],
-    live: 'https://player-connect.vercel.app',
+    live: 'https://player-connect.jlgouaho.com',
     github: 'https://github.com/cortex225/playerConnect'
   }
 ]
